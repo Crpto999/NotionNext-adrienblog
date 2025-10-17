@@ -54,7 +54,9 @@ export default function SideRight(props) {
   }
 
   return (
-    <div id='sideRight' className={` lg:w-80  ${post ? 'lg:pt-0' : 'lg:pt-8'}`}>
+    <div
+      id='sideRight'
+      className={`hidden lg:block lg:w-80  ${post ? 'lg:pt-0' : 'lg:pt-8'}`}>
       <div className='sticky top-16 space-y-4'>
         {post && post.toc && post.toc.length > 1 && (
           <Card>
