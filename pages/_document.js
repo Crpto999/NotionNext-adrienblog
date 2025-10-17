@@ -43,6 +43,12 @@ class MyDocument extends Document {
     return (
       <Html lang={BLOG.LANG}>
         <Head>
+          {/* Google 站点验证 */}
+          <meta
+            name='google-site-verification'
+            content='RF7t2L96sFsIcEIVfCXpt8CGt8wS11NjBEieGdl4Wkk'
+          />
+
           {/* 预加载字体 */}
           {BLOG.FONT_AWESOME && (
             <>
