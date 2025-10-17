@@ -10,7 +10,7 @@ const Footer = ({ title }) => {
     parseInt(since) < currentYear ? since + '-' + currentYear : currentYear
 
   return (
-    <footer className='relative z-10 bg-transparent flex-shrink-0 justify-center text-center m-auto w-full leading-6  text-gray-600 dark:text-gray-100 text-sm p-3'>
+    <footer className='relative z-10 bg-transparent flex-shrink-0 justify-center text-center m-auto w-full leading-6  text-white text-sm p-3'>
       {/* <DarkModeButton/> */}
       <i className='fas fa-copyright' /> {`${copyrightDate}`}
       <span>
@@ -25,11 +25,11 @@ const Footer = ({ title }) => {
           <i className='fas fa-users' />
           <span className='px-1 busuanzi_value_site_uv'> </span>
         </span>
-        <h1 className='text-xs pt-4 text-light-400 dark:text-gray-400'>
+        <h1 className='text-xs pt-4 text-white'>
           <i className='mx-1 animate-pulse fas fa-heart' />
           <a
             href={siteConfig('LINK')}
-            className='underline font-bold  dark:text-gray-300 '>
+            className='underline font-bold text-white hover:text-gray-200 transition-colors'>
             {siteConfig('AUTHOR')}
           </a>
           {siteConfig('BIO') && <> | {siteConfig('BIO')}</>}
