@@ -54,10 +54,8 @@ export default function SideRight(props) {
   }
 
   return (
-    <div
-      id='sideRight'
-      className={` lg:w-80 lg:pt-8 ${post ? 'lg:pt-0' : 'lg:pt-4'}`}>
-      <div className='sticky top-8 space-y-4'>
+    <div id='sideRight' className={` lg:w-80  ${post ? 'lg:pt-0' : 'lg:pt-8'}`}>
+      <div className='sticky top-16 space-y-4'>
         {post && post.toc && post.toc.length > 1 && (
           <Card>
             <Catalog toc={post.toc} />
@@ -93,7 +91,9 @@ export default function SideRight(props) {
             </Card>
           )}
 
-        <Announcement post={notice} />
+        {siteConfig('HEXO_WIDGET_ANNOUNCEMENT', null, CONFIG) && (
+          <Announcement post={notice} />
+        )}
 
         {siteConfig('COMMENT_WALINE_SERVER_URL') &&
           siteConfig('COMMENT_WALINE_RECENT') && <HexoRecentComments />}
